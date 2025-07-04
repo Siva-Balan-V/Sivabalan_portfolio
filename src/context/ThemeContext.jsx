@@ -3,12 +3,19 @@ import { createContext, useEffect, useState } from "react";
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [isDark, setIsDark] = useState(() => {
-    // Get initial theme from localStorage or default to false
-    return localStorage.getItem("theme") === "dark";
-  });
+  const getInitialTheme = () => {
+    // 1. Check localStorage
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme === "dark") return true;
+    if (storedTheme === "light") return false;
 
-  // Add/remove the `dark` class on <html> based on state
+    // 2. Otherwise, detect system preference
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  };
+
+  const [isDark, setIsDark] = useState(getInitialTheme);
+
+  // 3. Apply the class to <html>
   useEffect(() => {
     const root = document.documentElement;
     if (isDark) {
