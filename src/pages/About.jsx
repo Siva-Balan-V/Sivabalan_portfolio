@@ -5,6 +5,13 @@ const About = () => {
   const { isDark } = useContext(ThemeContext);
 
   return (
+    <div
+  className={`transition-all duration-700 ease-in-out opacity-100 min-h-screen ${
+    isDark
+      ? "bg-gray-900 text-white"
+      : "bg-white text-gray-900"
+  }`}
+>
     <div className={`min-h-screen flex flex-col justify-center items-center px-6 py-10 transition-colors duration-500 ${isDark ? 'bg-gray-900 text-white' : 'bg-gradient-to-br from-sky-100 to-white text-gray-800'}`}>
       <div className="max-w-3xl text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">About Me</h2>
@@ -18,6 +25,7 @@ const About = () => {
           I’ve built and deployed several projects, including a GST billing system, air quality predictor, customer churn analyzer, and more. I also hold a design patent for an IoT Smart Weighing Machine and actively participate in ideathons and coding events.
         </p>
       </div>
+    </div>
     </div>
   );
 };

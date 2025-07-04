@@ -23,6 +23,13 @@ const Contact = () => {
 
   return (
     <div
+  className={`transition-all duration-700 ease-in-out opacity-100 min-h-screen ${
+    isDark
+      ? "bg-gray-900 text-white"
+      : "bg-white text-gray-900"
+  }`}
+>
+    <div
       className={`min-h-screen px-6 py-10 transition-colors duration-500 ${
         isDark ? 'bg-gray-900 text-white' : 'bg-gradient-to-br from-sky-100 to-white text-gray-800'
       }`}
@@ -80,6 +87,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
+    </div>
     </div>
   );
 };

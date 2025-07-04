@@ -5,6 +5,7 @@ const Resume = () => {
   const { isDark } = useContext(ThemeContext);
 
   return (
+    
     <div
       className={`min-h-screen px-6 py-10 transition-colors duration-500 flex items-center justify-center ${
         isDark ? 'bg-gray-900 text-white' : 'bg-gradient-to-br from-sky-100 to-white text-gray-800'
