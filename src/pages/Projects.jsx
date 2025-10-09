@@ -3,10 +3,10 @@ import { ThemeContext } from '../context/ThemeContext';
 
 const projects = [
   {
-    title: 'GST Billing System',
-    description: 'A complete billing solution with GST calculation for small businesses.',
-    tech: 'Python, Tkinter',
-    link: 'https://github.com/Siva-Balan-V/gst-billing-system',
+    title: 'Rotaract Club of PPG Institute of Technology',
+    description: 'A website made for my Rotaract Club.',
+    tech: 'ReactJS,EmailJS',
+    link: 'https://github.com/Siva-Balan-V/rac_ppgit',
   },
   {
     title: 'Yummy Finder',
