@@ -24,7 +24,7 @@ const projects = [
     title: 'Customer Churn Prediction',
     description: 'A predictive model that identifies potential customer churn using ML.',
     tech: 'Python, Pandas, Streamlit',
-    link: 'https://github.com/Siva-Balan-V/customer-churn',
+    link: 'https://github.com/Siva-Balan-V/Customer_Churn',
   }
 ];
 
